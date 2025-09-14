@@ -1,4 +1,4 @@
-# AirBnB Database System
+# AirBnB Clone Database System
 
 ## Overview
 A comprehensive database system for an AirBnB-style accommodation booking platform. This system manages users, properties, bookings, payments, reviews, and messaging functionalities.
