@@ -1,0 +1,44 @@
+1. Start
+The flow starts when a Guest wants to book a property.
+
+2. Select Property
+The user browses available properties and selects one to book.
+
+3. Check Availability
+The system checks the availability of the property for the requested dates.
+
+Yes: Proceed to the next step.
+
+No: Display an error message indicating the property is unavailable and ask the user to select another date.
+
+4. User Authentication
+If the user isn't logged in, prompt them to log in or register.
+
+If the user is authenticated: Proceed to booking.
+
+If the user isn't authenticated: Redirect them to the login/registration page.
+
+5. Enter Booking Details
+The user enters booking details, including dates, number of guests, and any additional preferences.
+
+6. Calculate Total Price
+The system calculates the total price for the booking based on the property price per night and any additional fees.
+
+7. Confirm Booking
+The user reviews the details and confirms the booking.
+
+8. Payment Process
+The system sends the payment details to a payment service (e.g., Stripe, PayPal).
+
+Payment Success: The booking is confirmed, and the user is sent a confirmation email.
+
+Payment Failure: The user is asked to retry payment.
+
+9. Create Booking Record
+If the payment is successful, the system creates a booking record in the Bookings Database and updates property availability.
+
+10. Send Confirmation
+The system sends a booking confirmation to the user via email or in-app notification.
+
+11. End
+The process ends after the booking is confirmed.
