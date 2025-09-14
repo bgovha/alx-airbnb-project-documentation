@@ -1,0 +1,46 @@
+### 🔄 Core Processes
+
+| Process ID | Process Name                  | Description                                                                 |
+|------------|-------------------------------|-----------------------------------------------------------------------------|
+| P1         | User Registration & Login     | Handles signup, login, and authentication via JWT or OAuth.                |
+| P2         | Property Management           | Hosts can create, edit, or delete property listings.                       |
+| P3         | Booking System                | Guests can create and manage bookings.                                     |
+| P4         | Payment Handling              | Integrates with third-party services to process and validate payments.     |
+| P5         | Review & Ratings              | Users can leave reviews and ratings after completed bookings.              |
+| P6         | Notifications System          | Sends confirmation emails and in-app alerts.                               |
+
+---
+
+### 🗃️ Data Stores
+
+| Data Store | Description                                                   |
+|------------|---------------------------------------------------------------|
+| D1         | Users Database: Stores user profiles and credentials.         |
+| D2         | Properties Database: Stores property details and amenities.   |
+| D3         | Bookings Database: Stores booking details and availability.   |
+| D4         | Payments Database: Stores transaction records.                |
+| D5         | Reviews Database: Stores user-submitted ratings and comments. |
+
+---
+
+### 🔁 Data Flow Description
+
+- `User → P1`: Submits registration/login request.
+- `P1 → D1`: Stores or retrieves user credentials.
+- `Host → P2`: Submits property listing.
+- `P2 → D2`: Writes property info to the database.
+- `Guest → P3`: Requests to book a property.
+- `P3 → D3`: Saves booking and checks for availability.
+- `P3 → P4`: Sends payment request.
+- `P4 → Payment Service`: Validates payment.
+- `Payment Service → P4 → D4`: Returns payment status and logs it.
+- `P5 → D5`: Saves reviews linked to bookings.
+- `P6 → User`: Sends booking and payment notifications.
+
+---
+
+### 📌 Notes
+
+- All user inputs are validated before being processed.
+- Admin has visibility over all databases and can moderate content.
+- Error handling and logging are implemented at each step.
