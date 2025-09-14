@@ -8,7 +8,7 @@ A comprehensive database system for an AirBnB-style accommodation booking platfo
 ### Entities and Relationships
 
 #### 1. User Entity
-Stores all platform users including guests, hosts, and administrators.
+Stores all platform users including guests, hosts, & administrators.
 
 **Attributes:**
 - `user_id` (Primary Key, UUID) - Unique identifier for each user
